@@ -540,13 +540,12 @@
         .media-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 520px;
             gap: 4px;
-            align-items: stretch;
         }
 
         .media-card {
             position: relative;
-            min-height: 520px;
             overflow: hidden;
             cursor: pointer;
         }
@@ -1079,7 +1078,7 @@
             .news-lead { grid-template-columns: 300px 1fr; gap: 40px; }
             .news-grid { grid-template-columns: 1fr; }
             .media-grid { grid-template-columns: 1fr; }
-            .media-card { height: 420px; }
+            .media-grid { grid-auto-rows: 420px; }
             .hero-content { padding: 0 24px; }
             .partners-inner { padding: 80px 24px; }
             .ppf-block { gap: 40px; }
@@ -1402,7 +1401,7 @@
                 </div>
             </div>
             <p class="pillars-speaking">Ant Middleton is a highly compelling and truthful speaker. He speaks around the world to groups of young people and professionals about the importance of Identity.</p>
-            <a href="#" class="btn btn-filled pillars-cta">Enquire Now</a>
+            <a href="mailto:enquiries@antmiddleton.com" class="btn btn-filled pillars-cta">Enquire Now</a>
         </div>
     </section>
 
