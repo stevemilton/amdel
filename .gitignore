@@ -1,0 +1,16 @@
+# OS files
+.DS_Store
+
+# Documents
+*.pptx
+*.docx
+*.pdf
+
+# Temp files
+*.tmp.*
+
+# Backups
+*_backup.*
+
+# Thumbnails
+thumbnails/

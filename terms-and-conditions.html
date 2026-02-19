@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions — Ant Middleton</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --accent: #E86A00;
+            --accent-light: #FF8A2B;
+            --bg: #0A0A0A;
+            --bg-card: #111111;
+            --text: #FFFFFF;
+            --text-muted: #999999;
+            --font-display: 'Oswald', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-body);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 48px;
+            background: rgba(10,10,10,0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .nav-logo {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 22px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--text);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-logo img { height: 36px; width: auto; }
+
+        .nav-back {
+            font-family: var(--font-display);
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.3s;
+        }
+
+        .nav-back:hover { color: var(--accent); }
+
+        .page-header {
+            padding: 160px 48px 60px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .page-header h1 {
+            font-family: var(--font-display);
+            font-size: clamp(36px, 6vw, 64px);
+            font-weight: 700;
+            text-transform: uppercase;
+            line-height: 0.95;
+            margin-bottom: 16px;
+        }
+
+        .page-header .last-updated {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .page-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 48px 120px;
+        }
+
+        .page-content h2 {
+            font-family: var(--font-display);
+            font-size: 24px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 48px 0 16px;
+            color: var(--text);
+        }
+
+        .page-content h2:first-child { margin-top: 0; }
+
+        .page-content p {
+            font-size: 15px;
+            color: var(--text-muted);
+            line-height: 1.9;
+            margin-bottom: 16px;
+        }
+
+        .page-content ul {
+            list-style: none;
+            margin-bottom: 16px;
+            padding-left: 0;
+        }
+
+        .page-content ul li {
+            font-size: 15px;
+            color: var(--text-muted);
+            line-height: 1.9;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .page-content ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 6px;
+            height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        .page-content a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .page-content a:hover { color: var(--accent-light); }
+
+        footer {
+            padding: 60px 48px;
+            background: #050505;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .footer-left { display: flex; flex-direction: column; gap: 12px; }
+
+        .footer-logo {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .footer-links { display: flex; gap: 24px; }
+
+        .footer-links a {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover { color: var(--accent); }
+
+        .footer-copy { font-size: 11px; color: #444; }
+
+        .footer-social { display: flex; gap: 20px; }
+
+        .footer-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .footer-social a:hover { border-color: var(--accent); color: var(--accent); }
+        .footer-social svg { width: 16px; height: 16px; }
+
+        @media (max-width: 768px) {
+            nav { padding: 20px 24px; }
+            .page-header { padding: 140px 24px 40px; }
+            .page-content { padding: 0 24px 80px; }
+            footer { padding: 40px 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="ant-middleton-redesign.html" class="nav-logo">
+            <img src="Logowhite.png" alt="Ant Middleton" onerror="this.style.display='none'">
+        </a>
+        <a href="ant-middleton-redesign.html" class="nav-back">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M12 8H4M4 8L8 4M4 8L8 12" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+            Back to Home
+        </a>
+    </nav>
+
+    <div class="page-header">
+        <h1>Terms & Conditions</h1>
+        <p class="last-updated">Last updated: 19 February 2026</p>
+    </div>
+
+    <div class="page-content">
+
+        <h2>Agreement to Terms</h2>
+        <p>By accessing and using the Ant Middleton website ("the Site"), you agree to be bound by these Terms and Conditions ("Terms"). If you do not agree with any part of these Terms, you must not use the Site.</p>
+        <p>These Terms constitute a legally binding agreement between you and Ant Middleton ("we", "us", or "our").</p>
+
+        <h2>Use of the Website</h2>
+        <p>You may use the Site for lawful purposes only. You agree not to:</p>
+        <ul>
+            <li>Use the Site in any way that violates any applicable local, national, or international law or regulation</li>
+            <li>Use the Site to transmit or facilitate the transmission of unsolicited or unauthorised advertising or promotional material</li>
+            <li>Attempt to gain unauthorised access to any part of the Site, its servers, or any connected systems</li>
+            <li>Use the Site in any manner that could disable, overburden, damage, or impair the Site</li>
+            <li>Use any automated means, including bots, scrapers, or spiders, to access the Site without our express written permission</li>
+            <li>Impersonate or misrepresent your affiliation with any person or entity</li>
+        </ul>
+
+        <h2>Intellectual Property</h2>
+        <p>All content on the Site — including but not limited to text, images, photographs, graphics, logos, video, audio, and design — is the property of Ant Middleton or our licensors and is protected by copyright, trademark, and other intellectual property laws.</p>
+        <p>You may not reproduce, distribute, modify, create derivative works from, publicly display, or otherwise use any content from the Site without our prior written consent, except for personal, non-commercial use.</p>
+        <p>The Ant Middleton name, logo, and all related names, logos, product and service names, designs, and slogans are our trademarks. You may not use such marks without our prior written permission.</p>
+
+        <h2>Events and Bookings</h2>
+        <p>If you purchase tickets or book experiences through the Site (including but not limited to "Challenge The Wild" events, speaking engagements, and tours):</p>
+        <ul>
+            <li>All bookings are subject to availability and confirmation</li>
+            <li>Prices are as quoted at the time of booking and include VAT where applicable</li>
+            <li>Full payment is required at the time of booking unless otherwise stated</li>
+            <li>You are responsible for ensuring that all information provided during booking is accurate and complete</li>
+            <li>Tickets and bookings are non-transferable unless we agree otherwise in writing</li>
+        </ul>
+
+        <h2>Cancellation and Refunds</h2>
+        <p>Our cancellation and refund policy for events and bookings is as follows:</p>
+        <ul>
+            <li>Cancellations made more than 30 days before the event date will receive a full refund</li>
+            <li>Cancellations made between 14 and 30 days before the event will receive a 50% refund</li>
+            <li>Cancellations made less than 14 days before the event are non-refundable</li>
+            <li>We reserve the right to cancel or reschedule events due to circumstances beyond our control, in which case a full refund or alternative date will be offered</li>
+        </ul>
+
+        <h2>Newsletter and Communications</h2>
+        <p>By signing up to our newsletter, you consent to receiving marketing communications from us, including news, updates, and promotional offers. You may unsubscribe at any time by clicking the "unsubscribe" link in any email or by contacting us directly.</p>
+
+        <h2>Third-Party Links</h2>
+        <p>The Site may contain links to third-party websites or services that are not owned or controlled by us. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites. You access third-party sites at your own risk.</p>
+
+        <h2>Disclaimer of Warranties</h2>
+        <p>The Site and its content are provided on an "as is" and "as available" basis without warranties of any kind, either express or implied. We do not warrant that the Site will be uninterrupted, error-free, or free of viruses or other harmful components.</p>
+        <p>While we endeavour to keep the information on the Site accurate and up to date, we make no representations or warranties about the completeness, reliability, or accuracy of any content.</p>
+
+        <h2>Limitation of Liability</h2>
+        <p>To the fullest extent permitted by law, Ant Middleton shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or goodwill, arising out of or in connection with your use of the Site.</p>
+        <p>Nothing in these Terms shall limit or exclude our liability for death or personal injury caused by our negligence, fraud, or any other liability that cannot be lawfully limited or excluded.</p>
+
+        <h2>Indemnification</h2>
+        <p>You agree to indemnify and hold harmless Ant Middleton, its affiliates, and their respective officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses arising out of your use of the Site or violation of these Terms.</p>
+
+        <h2>Governing Law</h2>
+        <p>These Terms shall be governed by and construed in accordance with the laws of England and Wales. Any disputes arising from these Terms or your use of the Site shall be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
+
+        <h2>Severability</h2>
+        <p>If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions shall continue in full force and effect.</p>
+
+        <h2>Changes to These Terms</h2>
+        <p>We reserve the right to modify these Terms at any time. Changes will be effective immediately upon posting to the Site. Your continued use of the Site following any changes constitutes acceptance of the updated Terms.</p>
+
+        <h2>Contact Us</h2>
+        <p>If you have any questions about these Terms and Conditions, please contact us at:</p>
+        <p>Email: <a href="mailto:info@antmiddleton.com">info@antmiddleton.com</a></p>
+
+    </div>
+
+    <footer>
+        <div class="footer-left">
+            <a href="ant-middleton-redesign.html" class="footer-logo">Ant Middleton</a>
+            <div class="footer-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="cookie-policy.html">Cookie Policy</a>
+                <a href="terms-and-conditions.html">Terms & Conditions</a>
+            </div>
+            <div class="footer-copy">&copy; Ant Middleton 2026. All rights reserved.</div>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.facebook.com/antmiddletonsas" aria-label="Facebook" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/antmiddleton" aria-label="Instagram" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@antmiddleton" aria-label="TikTok" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@AntMiddleton" aria-label="YouTube" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.35 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://x.com/antmiddleton" aria-label="X" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4l16 16M20 4L4 20"/></svg>
+            </a>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy — Ant Middleton</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --accent: #E86A00;
+            --accent-light: #FF8A2B;
+            --bg: #0A0A0A;
+            --bg-card: #111111;
+            --text: #FFFFFF;
+            --text-muted: #999999;
+            --font-display: 'Oswald', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-body);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 48px;
+            background: rgba(10,10,10,0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .nav-logo {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 22px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--text);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-logo img { height: 36px; width: auto; }
+
+        .nav-back {
+            font-family: var(--font-display);
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.3s;
+        }
+
+        .nav-back:hover { color: var(--accent); }
+
+        .page-header {
+            padding: 160px 48px 60px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .page-header h1 {
+            font-family: var(--font-display);
+            font-size: clamp(36px, 6vw, 64px);
+            font-weight: 700;
+            text-transform: uppercase;
+            line-height: 0.95;
+            margin-bottom: 16px;
+        }
+
+        .page-header .last-updated {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .page-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 48px 120px;
+        }
+
+        .page-content h2 {
+            font-family: var(--font-display);
+            font-size: 24px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 48px 0 16px;
+            color: var(--text);
+        }
+
+        .page-content h2:first-child { margin-top: 0; }
+
+        .page-content p {
+            font-size: 15px;
+            color: var(--text-muted);
+            line-height: 1.9;
+            margin-bottom: 16px;
+        }
+
+        .page-content ul {
+            list-style: none;
+            margin-bottom: 16px;
+            padding-left: 0;
+        }
+
+        .page-content ul li {
+            font-size: 15px;
+            color: var(--text-muted);
+            line-height: 1.9;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .page-content ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 6px;
+            height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        .page-content a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .page-content a:hover { color: var(--accent-light); }
+
+        .cookie-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+        }
+
+        .cookie-table th,
+        .cookie-table td {
+            padding: 14px 16px;
+            text-align: left;
+            font-size: 14px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .cookie-table th {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent);
+            background: var(--bg-card);
+        }
+
+        .cookie-table td {
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .cookie-table tr:hover td {
+            background: rgba(255,255,255,0.02);
+        }
+
+        footer {
+            padding: 60px 48px;
+            background: #050505;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .footer-left { display: flex; flex-direction: column; gap: 12px; }
+
+        .footer-logo {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .footer-links { display: flex; gap: 24px; }
+
+        .footer-links a {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover { color: var(--accent); }
+
+        .footer-copy { font-size: 11px; color: #444; }
+
+        .footer-social { display: flex; gap: 20px; }
+
+        .footer-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .footer-social a:hover { border-color: var(--accent); color: var(--accent); }
+        .footer-social svg { width: 16px; height: 16px; }
+
+        @media (max-width: 768px) {
+            nav { padding: 20px 24px; }
+            .page-header { padding: 140px 24px 40px; }
+            .page-content { padding: 0 24px 80px; }
+            footer { padding: 40px 24px; }
+            .cookie-table { font-size: 13px; }
+            .cookie-table th, .cookie-table td { padding: 10px 12px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="ant-middleton-redesign.html" class="nav-logo">
+            <img src="Logowhite.png" alt="Ant Middleton" onerror="this.style.display='none'">
+        </a>
+        <a href="ant-middleton-redesign.html" class="nav-back">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M12 8H4M4 8L8 4M4 8L8 12" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+            Back to Home
+        </a>
+    </nav>
+
+    <div class="page-header">
+        <h1>Cookie Policy</h1>
+        <p class="last-updated">Last updated: 19 February 2026</p>
+    </div>
+
+    <div class="page-content">
+
+        <h2>What Are Cookies</h2>
+        <p>Cookies are small text files that are placed on your device when you visit a website. They are widely used to make websites work more efficiently, provide a better user experience, and supply information to the owners of the site.</p>
+        <p>This Cookie Policy explains how Ant Middleton ("we", "us", or "our") uses cookies and similar technologies on our website.</p>
+
+        <h2>How We Use Cookies</h2>
+        <p>We use cookies for the following purposes:</p>
+        <ul>
+            <li><strong>Essential Cookies:</strong> These are necessary for the website to function properly. They enable basic features like page navigation and access to secure areas. The website cannot function properly without these cookies.</li>
+            <li><strong>Analytics Cookies:</strong> These help us understand how visitors interact with our website by collecting and reporting information anonymously. This helps us improve our site.</li>
+            <li><strong>Marketing Cookies:</strong> These are used to track visitors across websites to allow the display of relevant advertisements. They may be set by us or by third-party advertising partners.</li>
+            <li><strong>Preference Cookies:</strong> These enable the website to remember choices you have made (such as your language or region) and provide enhanced, personalised features.</li>
+        </ul>
+
+        <h2>Cookies We Use</h2>
+        <table class="cookie-table">
+            <thead>
+                <tr>
+                    <th>Cookie Name</th>
+                    <th>Type</th>
+                    <th>Purpose</th>
+                    <th>Duration</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>_ga</td>
+                    <td>Analytics</td>
+                    <td>Google Analytics — used to distinguish unique users and track site usage</td>
+                    <td>2 years</td>
+                </tr>
+                <tr>
+                    <td>_ga_*</td>
+                    <td>Analytics</td>
+                    <td>Google Analytics 4 — used to persist session state</td>
+                    <td>2 years</td>
+                </tr>
+                <tr>
+                    <td>_gid</td>
+                    <td>Analytics</td>
+                    <td>Google Analytics — used to distinguish users</td>
+                    <td>24 hours</td>
+                </tr>
+                <tr>
+                    <td>_fbp</td>
+                    <td>Marketing</td>
+                    <td>Facebook Pixel — used to deliver and measure advertisements</td>
+                    <td>3 months</td>
+                </tr>
+                <tr>
+                    <td>cookie_consent</td>
+                    <td>Essential</td>
+                    <td>Stores your cookie consent preferences</td>
+                    <td>1 year</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Third-Party Cookies</h2>
+        <p>Some cookies are placed by third-party services that appear on our pages. We do not control these cookies. Third-party providers include:</p>
+        <ul>
+            <li><strong>Google Analytics:</strong> Web analytics service that tracks and reports website traffic. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+            <li><strong>Meta (Facebook/Instagram):</strong> Social media tracking for advertising purposes. <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Meta Privacy Policy</a></li>
+            <li><strong>YouTube (Google):</strong> Embedded video content may set cookies. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+        </ul>
+
+        <h2>Managing Cookies</h2>
+        <p>You can control and manage cookies in several ways:</p>
+        <ul>
+            <li><strong>Browser Settings:</strong> Most browsers allow you to refuse or delete cookies through their settings. The method varies by browser — check your browser's help section for instructions.</li>
+            <li><strong>Opt-Out Tools:</strong> You can opt out of Google Analytics by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a>.</li>
+            <li><strong>Cookie Consent:</strong> When you first visit our website, you will be presented with a cookie consent banner where you can accept or reject non-essential cookies.</li>
+        </ul>
+        <p>Please note that disabling cookies may affect the functionality of our website and your ability to access certain features.</p>
+
+        <h2>Changes to This Policy</h2>
+        <p>We may update this Cookie Policy from time to time to reflect changes in technology, regulation, or our business practices. Any changes will be posted on this page with an updated date.</p>
+
+        <h2>Contact Us</h2>
+        <p>If you have any questions about our use of cookies, please contact us at:</p>
+        <p>Email: <a href="mailto:info@antmiddleton.com">info@antmiddleton.com</a></p>
+        <p>For more information about how we handle your personal data, please see our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+
+    </div>
+
+    <footer>
+        <div class="footer-left">
+            <a href="ant-middleton-redesign.html" class="footer-logo">Ant Middleton</a>
+            <div class="footer-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="cookie-policy.html">Cookie Policy</a>
+                <a href="terms-and-conditions.html">Terms & Conditions</a>
+            </div>
+            <div class="footer-copy">&copy; Ant Middleton 2026. All rights reserved.</div>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.facebook.com/antmiddletonsas" aria-label="Facebook" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/antmiddleton" aria-label="Instagram" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@antmiddleton" aria-label="TikTok" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@AntMiddleton" aria-label="YouTube" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.35 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://x.com/antmiddleton" aria-label="X" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4l16 16M20 4L4 20"/></svg>
+            </a>
+        </div>
+    </footer>
+
+</body>
+</html>
