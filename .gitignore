@@ -14,3 +14,6 @@
 
 # Thumbnails
 thumbnails/
+
+# Large media files (exceed GitHub 100MB limit)
+amdel.mp4
