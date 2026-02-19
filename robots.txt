@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://stevemilton.github.io/amdel/sitemap.xml
