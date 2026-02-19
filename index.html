@@ -541,11 +541,12 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 4px;
+            align-items: stretch;
         }
 
         .media-card {
             position: relative;
-            height: 520px;
+            min-height: 520px;
             overflow: hidden;
             cursor: pointer;
         }
@@ -1274,7 +1275,7 @@
 
                 <!-- TV -->
                 <div class="media-card">
-                    <div class="media-card-bg" style="background-image: url('SAS1.png')"></div>
+                    <div class="media-card-bg" style="background-image: url('SAS1-resized.jpg')"></div>
                     <div class="media-card-overlay"></div>
                     <div class="media-card-content">
                         <div class="media-card-tag">Television</div>
